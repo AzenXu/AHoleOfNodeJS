@@ -18,4 +18,5 @@
 
 暂时木有了，感谢楼上大神..顺便在GayHub上粉一波，看看会不会被勾搭...
 - 指定教材
-[教材](https://github.com/alsotang/node-lessons)
+
+[徐畅指定官方教材](https://github.com/alsotang/node-lessons)
