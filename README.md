@@ -20,3 +20,7 @@
 - 指定教材
 
 [徐畅指定官方教材](https://github.com/alsotang/node-lessons)
+
+- 参考资料
+
+[阿里团队 - 7天学会NodeJS](七天学会NodeJS)
