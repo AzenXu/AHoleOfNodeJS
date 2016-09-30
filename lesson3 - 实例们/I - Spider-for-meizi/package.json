@@ -1,0 +1,22 @@
+{
+  "name": "spider",
+  "version": "1.0.0",
+  "description": "a cute spider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AzenXu/AHoleOfNodeJS.git"
+  },
+  "keywords": [
+    "spider"
+  ],
+  "author": "Azen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AzenXu/AHoleOfNodeJS/issues"
+  },
+  "homepage": "https://github.com/AzenXu/AHoleOfNodeJS#readme"
+}
