@@ -17,23 +17,49 @@ var cheerio = require('cheerio');
 var path = require('path');
 var fs = require('fs');
 
-var options = {
-  url: 'http://jandan.net/ooxx/page-1319',
-  headers: {
-    'User-Agent': 'request'
-  }
-};
+var startPage = 2162
 
-request(options, function (error, response, body) {
-  // console.log(error);
-  // console.log(response);
-  // console.log(body);
-  console.log(response.statusCode);
-  if (!error && response.statusCode == 200) {
+// downloadWithPageNumber(startPage)
+
+for (var i = startPage; i > startPage - 100; i--) {
+  // if (i != startPage) {
+  //   sleep(5000)
+  //   console.log('睡醒了');
+  // }
+  downloadWithPageNumber(i);
+}
+
+function sleep(numberMillis) {
+    var now = new Date();
+    var exitTime = now.getTime() + numberMillis;
+    while (true) {
+        now = new Date();
+        if (now.getTime() > exitTime)
+            return;
+    }
+}
+
+function downloadWithPageNumber(number) {
+  console.log('下载第' + number + '页');
+  var options = {
+    url: 'http://jandan.net/ooxx/page-' + number,
+    headers: {
+      'User-Agent': 'request'
+    }
+  };
+
+  request(options, function (error, response, body) {
+    // console.log(error);
+    // console.log(response);
     // console.log(body);
-    _acquireData(body);
-  }
-})
+    console.log(options.url);
+    console.log(response.statusCode);
+    if (!error && response.statusCode == 200) {
+      // console.log(body);
+      _acquireData(body);
+    }
+  })
+}
 
 function _acquireData(data) {
   var $ = cheerio.load(data);
